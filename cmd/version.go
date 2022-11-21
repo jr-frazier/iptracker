@@ -6,6 +6,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/common-nighthawk/go-figure"
 	"github.com/spf13/cobra"
 )
 
@@ -15,6 +16,9 @@ var versionCmd = &cobra.Command{
 	Short: "get the version of the tool",
 	Long:  "get the version of the tool",
 	Run: func(cmd *cobra.Command, args []string) {
+		myFigure := figure.NewFigure("IP Tracker", "alligator", true)
+
+		fmt.Println(myFigure)
 		fmt.Println("v0.1.0")
 	},
 }
